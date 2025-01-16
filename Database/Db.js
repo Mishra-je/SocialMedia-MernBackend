@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 require('dotenv').config(); 
-const Database = process.env.DATABASE;
+const Database = process.env.DATABASE || "mongodb://127.0.0.1:27017/socialmedia";
 
 mongoose.connect(Database, { useNewUrlParser: true, useUnifiedTopology: true });
 
